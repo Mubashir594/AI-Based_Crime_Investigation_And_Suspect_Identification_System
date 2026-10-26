@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getApiBaseCandidates } from "../utils/apiBase";
+import BiometricFaceScanner from "../components/BiometricFaceScanner";
 import "../styles/login.css";
 
 export default function Login() {
@@ -59,47 +60,7 @@ export default function Login() {
       <div className="auth-shell">
         <section className="auth-visual" aria-hidden="true">
           <p className="auth-kicker">AI INVESTIGATION SYSTEM</p>
-
-          <div className="face-scanner">
-            <div className="scanner-wireframe">
-              <svg viewBox="0 0 600 760" className="wireframe-svg" role="img" aria-label="Graphic face scanning animation">
-                <g stroke="rgba(80,235,255,0.95)" fill="none" strokeWidth="1.6">
-                  <ellipse cx="300" cy="275" rx="150" ry="206" />
-                  <ellipse cx="300" cy="275" rx="128" ry="186" />
-                  <ellipse cx="300" cy="275" rx="104" ry="164" />
-                  <ellipse cx="300" cy="275" rx="82" ry="140" />
-                  <path d="M300 70 Q238 96 210 162 Q188 216 188 282 Q188 365 224 430 Q255 488 300 526" />
-                  <path d="M300 70 Q362 96 390 162 Q412 216 412 282 Q412 365 376 430 Q345 488 300 526" />
-                  <path d="M300 76 L300 530" />
-                  <path d="M248 212 Q300 192 352 212" />
-                  <path d="M232 248 Q300 228 368 248" />
-                  <path d="M220 292 Q300 278 380 292" />
-                  <path d="M228 338 Q300 326 372 338" />
-                  <path d="M240 384 Q300 374 360 384" />
-                  <path d="M258 432 Q300 426 342 432" />
-                  <path d="M206 278 Q238 252 275 267" />
-                  <path d="M394 278 Q362 252 325 267" />
-                  <path d="M270 352 Q300 374 330 352" />
-                  <path d="M146 545 Q300 672 454 545" />
-                  <ellipse cx="300" cy="660" rx="196" ry="58" />
-                  <ellipse cx="300" cy="648" rx="172" ry="42" />
-                  <ellipse cx="300" cy="636" rx="146" ry="30" />
-                </g>
-              </svg>
-            </div>
-            <div className="scanner-photo-tint" />
-            <div className="portrait-divider" />
-            <div className="mesh-overlay" />
-            <span className="mesh-point mesh-point-1" />
-            <span className="mesh-point mesh-point-2" />
-            <span className="mesh-point mesh-point-3" />
-            <span className="mesh-point mesh-point-4" />
-            <span className="mesh-point mesh-point-5" />
-            <span className="mesh-point mesh-point-6" />
-            <span className="mesh-point mesh-point-7" />
-            <div className="scanner-grid" />
-            <div className="scanner-line" />
-          </div>
+          <BiometricFaceScanner />
         </section>
 
         <form className="auth-form" onSubmit={handleLogin}>

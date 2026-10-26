@@ -1,9 +1,67 @@
+# ==========================================
+# 1. Virtual Environments & Dependencies
+# ==========================================
 venv/
 .venv/
-__pycache__/
-*.pyc
+env/
+ENV/
 frontend/node_modules/
+
+# ==========================================
+# 2. Python Caches & Build Artifacts
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+*.egg-info/
+
+# ==========================================
+# 3. Frontend Build Outputs & Cache
+# ==========================================
 frontend/dist/
- # local database + media
-crime_project/db.sqlite3
-crime_project/media/
+frontend/build/
+.vite/
+.eslintcache
+
+# ==========================================
+# 4. Sensitive Database & Local Credentials
+# ==========================================
+*.sqlite3
+*.db
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# 5. Heavy Media, Datasets & Uploaded Evidence
+# ==========================================
+crime_project/dataset/
+crime_project/uploaded_videos/
+crime_project/media/alert_snapshots/
+crime_project/media/criminal_photos/
+crime_project/media/evidence_files/
+frontend/public/face-scan-reference.jpg
+
+# ==========================================
+# 6. Large Classical Model Artifacts
+# ==========================================
+*.yml
+*.yaml
+*.h5
+*.pt
+*.onnx
+
+# Allow lightweight FaceNet embedding vectors
+!crime_project/facenet_embeddings.pkl
+!crime_project/face_recognition/facenet_embeddings.pkl
+
+# ==========================================
+# 7. OS & Editor Artifacts
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
